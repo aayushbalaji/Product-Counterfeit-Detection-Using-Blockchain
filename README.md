@@ -15,7 +15,7 @@
     
 ## Deploy the Project:- 
 
-1. Clone the project
+1. Clone the project:-
 ```
 git clone https://github.com/aayushbalaji/Product-Counterfeit-Detection-Using-Blockchain.git
 ```
