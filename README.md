@@ -10,42 +10,48 @@
 
 
 ## Other Requirements:-
-1. Any chromium based browser i.e. Chrome 
+1. Google Chrome browser 
 2. Metamask browser extension
     
-## setup process 
+## Deploy the Project:- 
 
 1. Clone the project
 ```
-git clone _________
+git clone https://github.com/aayushbalaji/Product-Counterfeit-Detection-Using-Blockchain.git
 ```
-2. Go to the project folder, open terminal there and run following command to install required node_modules:-
+
+2. Go to the project Folder, open a Terminal there and run following command to install the required node_modules:-
 ```
 npm install
 ```
-3. Compile contract source files. (Compilation and deployment can be done using truffle migrate):-
+
+3. Compile the smart contract source files (Compilation and deployment can be done together using ```truffle migrate``` ):-
 ```
 truffle compile
 ```
-4. Open Ganache, (to setup local blockchain)
-    - create new workspace
-    - add truffle-config.js  in truffle project 
-    - change port to 7545 in server settings (same as port in truffle-config.js)
-5. In chrome, open metamask 
-   - add new test network using  
-        - NETWORK ID (i.e. 5777 ,from Ganache Server settings) 
-        - RPC SERVER (i.e http://127.0.0.1:7545 ,from Ganache Server settings)
-        - CHAIN CODE (i.e. 1337)
-   - import account using private key of any account from local blockchain available in Ganache.
-6. In terminal, run following commands:-
+
+4. Open Ganache to setup local blockchain:-
+    - Create a new workspace
+    - Add truffle-config.js file as the truffle project 
+    - Uncomment the deployment class and change the port to 7545 in the truffle-config.js file
+
+5. In Chrome, open Metamask:-
+   - Add a new test network using:
+        - NETWORK ID (5777) from Ganache Server settings 
+        - RPC SERVER (https://127.0.0.1:7545), from Ganache Server settings
+        - CHAIN CODE (1337)
+   - Import any account from the local blockchain available in Ganache, using its private key.
+
+6. In terminal, run the following commands:-
 - Run migrations to deploy contracts:
 ```
 truffle migrate
 ```
-
-- Start a server and it will open a homepage (index.html) file in the default browser:
+- Start the server and it will open the homepage (index.html) file in Chrome:
 ```
 npm run dev 
 ``` 
-7. Login to metamask ,and connect the added account to local blockchain (i.e.localhost:3000)
-8. Interact with the website
+
+7. Login to metamask, and connect the imported account to the deployed site (localhost:3000)
+
+8. Interact with the site
